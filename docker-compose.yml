@@ -1,0 +1,22 @@
+services:
+  fastapi:
+    build: .
+    image: custom-fastapi:latest
+
+    volumes:
+      - .:/app
+    ports:
+      - 8000:8000
+    env_file:
+      - .env
+    command: tail -f /dev/null
+    #command: uvicorn examples.main:app_ --port 8000 --host 0.0.0.0
+
+  mysql:
+    image: mysql:8.0.32
+    ports:
+      - 33061:3306
+    env_file:
+      - .env
+    volumes:
+      - ./docker_volumes/mysql:/var/lib/mysql
