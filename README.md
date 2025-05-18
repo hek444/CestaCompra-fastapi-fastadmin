@@ -21,6 +21,16 @@ DATABASE_URL="mysql+mysqldb://root:mypassword@localhost/compra_db"
 
 **Nota:** Asegúrate de que la base de datos especificada exista en tu servidor MySQL.
 
+````
+ADMIN_USER=[user]
+ADMIN_PASSWORD=[password]
+DATABASE_URL="mysql+aiomysql://myuser:mypass@mysql/test"
+
+ADMIN_SECRET_KEY=un_valor_muy_secreto_y_largo_>32_bytes
+ADMIN_USER_MODEL=[Modelo Usuario]
+ADMIN_USER_MODEL_USERNAME_FIELD=[Campo del modelo para username]
+````
+
 ## Instalación
 
 1.  **Clona el repositorio (si lo tienes en uno):**
